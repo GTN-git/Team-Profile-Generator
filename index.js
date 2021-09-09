@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generatePage = require("./src/template");
 
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -40,7 +41,7 @@ function init() {
       );
 
       employees.push(manager);
-      add()
+      add();
     });
 }
 
@@ -77,9 +78,8 @@ function engineer() {
       );
 
       employees.push(engineer);
-      add()
+      add();
     });
-    
 }
 
 function intern() {
@@ -119,6 +119,11 @@ function intern() {
     });
 }
 
+function generateHTML() {
+  const htmlString = generatePage(employees);
+  fs.writeFileSync("./dist/index.html", htmlString);
+}
+
 function add() {
   inquirer
     .prompt({
@@ -127,20 +132,17 @@ function add() {
       message: "do you want to add another engineer or intern or none",
       choices: ["Engineer", "Intern", "None"],
     })
-     
-        //if statement addAnswers.add (intern, etc run the next) otherwise push array to generate HTML
-  
-      if (add = "Intern") {
-        intern()
+    .then((addAnswers) => {
+      if (addAnswers.add === "Intern") {
+        intern();
+      } else if (addAnswers.add === "Engineer") {
+        engineer();
+      } else if (addAnswers.add === "None") {
+        generateHTML();
       }
-      else if (add = "Engineer") {
-        engineer()
-      }
-      else if (add = "None") {
-        return
-      }
-    };
+    });
+}
 
-
+//if statement addAnswers.add (intern, etc run the next) otherwise push array to generate HTML
 
 init();
