@@ -1,0 +1,16 @@
+#header {
+background-color: lightcoral;
+font-weight: bold;
+color: white;
+text-align: center;
+padding: 20px 0;
+}
+
+
+#cards {
+  display: flex;
+  margin: 20px;
+}
+ .fas {
+   padding-right: 5px;
+ }

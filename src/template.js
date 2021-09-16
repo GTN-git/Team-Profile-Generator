@@ -20,7 +20,7 @@ const generateEngineer = (engineer) => {
               </h5>
               <h6 class="card-subtitle mb-2 text-muted">${engineer.getName()}</h6>
               <p class="card-text" id="ID">${engineer.getId()}</p>
-              <a href="mailto:${engineer.getEmail()}" class="card-text" id="Email">${engineer.getEmail()}</a>
+              <a href="mailto:${engineer.getEmail()}" class="card-text" id="Email">${engineer.getEmail()}</a><br>
               <a href="https://github.com/${engineer.getGithub()}" class="card-text" id="github">${engineer.getGithub()}</a>
             </div>
           </div>`;
@@ -34,7 +34,7 @@ const generateIntern = (intern) => {
               </h5>
               <h6 class="card-subtitle mb-2 text-muted">${intern.getName()}</h6>
               <p class="card-text" id="ID">${intern.getId()}</p>
-              <a href="mailto:${intern.getEmail()}" class="card-text" id="Email">${intern.getEmail()}</a>
+              <a href="mailto:${intern.getEmail()}" class="card-text" id="Email">${intern.getEmail()}</a><br>
               <p class="card-text" id="school">${intern.getSchool()}</p>
             </div>
           </div>`;
@@ -70,14 +70,16 @@ module.exports = (employees) => {
     </head>
     <body>
       <header>
+      <div id="header">My Team</div>
         <div class="container">
           <div class="row">
-            <div class="col-12" id="header">Employees</div>
             <div class="col-12" id="cards">
+            <div class="card-deck">
               ${generateManager(employees[0])}
               ${employeeCards}
             </div>
           </div>
+        </div>
         </div>
       </header>
     </body>
