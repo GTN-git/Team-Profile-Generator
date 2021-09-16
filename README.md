@@ -6,6 +6,7 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contact Info](#questions)
+* [Walkthrough Video](#video)
 
 
 # Installation
@@ -22,3 +23,8 @@ Run node index from your terminal from the root folder of the project.
 Please contact me at my github [GTN-git](https://github.com/GTN-git) or send me an email @ georgengo@msn.com with any questions.
 
 
+# Walkthrough Video
+https://drive.google.com/file/d/1ulCKn_9Mc2gkeqYjFY2BG5G-XRNGvsCG/view
+
+# Screenshot Video
+![Readme screenshot](https://user-images.githubusercontent.com/85602645/133549731-32c0de77-b08b-435c-9ad0-bc507574f7d1.jpg)

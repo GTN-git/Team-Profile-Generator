@@ -5,9 +5,9 @@ const generateManager = (manager) => {
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-coffee"></i>Manager</h5>
               <h6 class="card-subtitle mb-2 text-muted">${manager.getName()}</h6>
-              <p class="card-text" id="ID">${manager.getId()}</p>
-              <a href="mailto:${manager.getEmail()}" class="card-text" id="Email">${manager.getEmail()}</a>
-              <p class="card-text" id="Office">${manager.getOfficeNumber()}</p>
+              <p class="card-text" id="ID">ID: ${manager.getId()}</p>
+              <a href="mailto:${manager.getEmail()}" class="card-text" id="Email">Email: ${manager.getEmail()}</a>
+              <p class="card-text" id="Office">Office Number: ${manager.getOfficeNumber()}</p>
             </div>
           </div>`;
 };
@@ -19,9 +19,9 @@ const generateEngineer = (engineer) => {
                 <i class="fas fa-glasses"></i>Engineer
               </h5>
               <h6 class="card-subtitle mb-2 text-muted">${engineer.getName()}</h6>
-              <p class="card-text" id="ID">${engineer.getId()}</p>
-              <a href="mailto:${engineer.getEmail()}" class="card-text" id="Email">${engineer.getEmail()}</a><br>
-              <a href="https://github.com/${engineer.getGithub()}" class="card-text" id="github">${engineer.getGithub()}</a>
+              <p class="card-text" id="ID">ID: ${engineer.getId()}</p>
+              <a href="mailto:${engineer.getEmail()}" class="card-text" id="Email">Email: ${engineer.getEmail()}</a><br>
+              <a href="https://github.com/${engineer.getGithub()}" class="card-text" id="github">Github: ${engineer.getGithub()}</a>
             </div>
           </div>`;
 };
@@ -33,9 +33,9 @@ const generateIntern = (intern) => {
                 <i class="fas fa-graduation-cap"></i>Intern
               </h5>
               <h6 class="card-subtitle mb-2 text-muted">${intern.getName()}</h6>
-              <p class="card-text" id="ID">${intern.getId()}</p>
-              <a href="mailto:${intern.getEmail()}" class="card-text" id="Email">${intern.getEmail()}</a><br>
-              <p class="card-text" id="school">${intern.getSchool()}</p>
+              <p class="card-text" id="ID">ID: ${intern.getId()}</p>
+              <a href="mailto:${intern.getEmail()}" class="card-text" id="Email">Email: ${intern.getEmail()}</a><br>
+              <p class="card-text" id="school">School: ${intern.getSchool()}</p>
             </div>
           </div>`;
 };
